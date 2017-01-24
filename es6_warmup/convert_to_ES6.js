@@ -24,7 +24,7 @@ function swap(arr,x,y){
 }
 
 function swapEs6(arr,x,y){
-  //Your code here
+  return [arr[x], arr[y]] = [arr[y], arr[x]]
 }
 
 
@@ -38,7 +38,12 @@ function changeEachElem(array){
 }
 
 function changeEachElemEs6(array){
-  //Your code here
+  let iterable = array;
+  let result = [];
+  for (let value of iterable){
+    result.push(value);
+  }
+  return result;
 }
 
 
@@ -52,8 +57,10 @@ function useArrows(array){
 }
 
 function useArrowsEs6(array){
-  //Your code here
-
+  var result = array.map((element)=> {
+    return element * 2;
+  });
+  return result;
 }
 
 //refactor this to use the backticks for string interpolation
@@ -62,7 +69,7 @@ function printString(name,greeting){
 }
 
 function printStringEs6(name,greeting){
-  //Your code here
+  return name + ` says "` + greeting + `"`;
 
 }
 
@@ -76,8 +83,9 @@ function makeObj(val1,val2){
 }
 
 function makeObjEs6(val1,val2){
-  //Your code here
-
+  var num = val1 + val2, myObj = {}
+  myObj[num] = 'Shayna';
+  return myObj;
 }
 
 
@@ -91,5 +99,7 @@ function ObjProperties(name, grade, favColor) {
 }
 
 function ObjPropertiesEs6(name, grade, favColor) {
-  //Your code here
+  return {
+    name, grade, favColor
+  };
 }
