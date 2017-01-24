@@ -57,9 +57,7 @@ function useArrows(array){
 }
 
 function useArrowsEs6(array){
-  var result = array.map((element)=> {
-    return element * 2;
-  });
+  var result = array.map((element)=> element * 2);
   return result;
 }
 
@@ -69,8 +67,7 @@ function printString(name,greeting){
 }
 
 function printStringEs6(name,greeting){
-  return name + ` says "` + greeting + `"`;
-
+  return `${name} says "${greeting}"`;
 }
 
 
